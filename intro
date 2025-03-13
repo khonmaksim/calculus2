@@ -1,1 +1,4 @@
-ch1: In this chapter, we study vector-valued functions—functions that output vectors instead of single numbers. 
+ch1: This chapter studies vector-valued functions—functions that output vectors instead of single numbers. 
+ch2: This chapter extends single-variable calculus to functions of several variables and introduces partial derivatives.
+ch3: This chapter introduces double and triple integrals, which extend single integrals to functions of two or three variables, representing areas and volumes.
+ch4: This chapter introduces line and surface integrals, which help analyze work, mass, fluid flow, and electromagnetic forces.
