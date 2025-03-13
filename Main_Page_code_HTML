@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Main Page</title>
+  </head>
+  <body>
+    <header id="header">
+      <p>Calculus II</p>
+      <nav id="nav-bar">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#intro" class="nav-link">Introduction</a>
+        <a href="#contacts" class="nav-link">Contacts</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>This website was created by two KAIST students, Nurbol Zakir and Maksim Khon. We noticed that many students struggle with this course, so we decided to develop a platform that provides clear and thorough explanations along with solutions to problems of varying difficulty levels. Our goal is to make learning more accessible and effective. We hope this course will be a valuable resource for students in the future.</p>
+      </section>
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>In this course, you will learn fundamental concepts related to vectors, double integrals, partial derivatives of functions, and more. The course is completely free and accessible to everyone. If you're interested, you can register by filling out a short form below.</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="submit" id="submit" value="GET STARTED">
+            </form>
+      </section>
+      <section id="contacts">
+        <h2>Contacts</h2>
+        <ul>
+          <li>Email: zakirnurbol46@gmail.com / dednomad111@gmail.com</li>
+          <li>LinkedIn: <a href="www.linkedin.com/in/nurbolzakir">Nurbol Zakir</a> / <a href="https://www.linkedin.com/in/maksimkhon/">Maksim Khon</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
