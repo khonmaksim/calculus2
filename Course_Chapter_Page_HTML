@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <main id="main-doc">
+    <section id="JavaScript_Functions" class="main-name">
+      <nav id="navbar">
+        <header>JavaScript Functions</header>
+        <ul>
+          <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+          <li><a href="#What_is_a_Function?" class="nav-link">What is a Function?</a></li>
+          <li><a href="#Declaring_a_Function" class="nav-link">Declaring a Function</a></li>
+          <li><a href="#Function_Parameters_and_Arguments" class="nav-link">Function Parameters and Arguments</a></li>
+          <li><a href="#Returning_Values_from_Functions" class="nav-link">Returning Values from Functions</a></li>
+          <li><a href="#Function_Expressions" class="nav-link">Function Expressions</a></li>
+          <li><a href="#Arrow_Functions" class="nav-link">Arrow Functions</a></li>
+          <li><a href="#Common_Pitfalls_and_Best_Practices" class="nav-link">Common Pitfalls and Best Practices</a></li>
+          <li><a href="#Additional_Resources" class="nav-link">Additional Resources</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>In JavaScript, functions are one of the core building blocks. A function is a reusable block of code designed to perform a specific task. By using functions, you can write cleaner, more organized, and modular code.</p>
+      <p> Functions allow you to execute code multiple times with different inputs (parameters), and they can return values, making them an essential concept for both beginner and advanced JavaScript developers.</p>
+      <code></code>
+    </section>
+    <section class="main-section" id="What_is_a_Function?">
+      <header>What is a Function?</header>
+      <p>A function in JavaScript is a block of code that is executed when "called" or "invoked." Functions allow you to group related code into one unit, making it reusable and easier to manage. Functions can take inputs, called parameters, and can return a result, which can be used elsewhere in the program.</p>
+      <p>Example of a simple function:</p>
+      <pre>
+        <code>
+        function greet() {
+        console.log("Hello, World!");
+        }
+        greet();  // Outputs: Hello, World!
+        </code>
+      </pre>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+    <section class="main-section" id="Declaring_a_Function">
+      <header>Declaring a Function</header>
+      <p>To declare a function in JavaScript, you use the function keyword, followed by the function name, a set of parentheses (which may contain parameters), and a set of curly braces {} containing the code that will run when the function is called.</p>
+      <p>Here's an example:</p>
+      <pre>
+        <code>
+          function sum(a, b) {
+            return a + b;
+          }
+        </code>
+      </pre>
+      <p>In this case, the function sum takes two parameters a and b, and returns the sum of both.</p>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+    <section class="main-section" id="Function_Parameters_and_Arguments">
+      <header>Function Parameters and Arguments</header>
+      <p>When you define a function, you can specify parameters, which are placeholders for values that the function will receive when called. These values are called arguments.</p>
+      <p>For example:</p>
+      <pre>
+        <code>
+          function multiply(a, b) {
+            return a * b;
+          }
+          console.log(multiply(4, 5));  // Outputs: 20
+        </code>
+      </pre>
+      <p>In this example:</p>
+      <ul>
+        <li>a and b are parameters.</li>
+        <li>4 and 5 are the arguments passed when calling the function.</li>
+        <li>Parameters are the variables listed in the function definition.</li>
+        <li>Arguments are the values passed to the function when it is called.</li>
+      </ul>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+    <section class="main-section" id="Returning_Values_from_Functions">
+      <header>Returning Values from Functions</header>
+      <p>Functions can return values using the return keyword. When a function executes the return statement, it sends a result back to the place where the function was called.</p>
+      <pre>
+        <code>
+          function square(num) {
+            return num * num;
+          }
+          console.log(square(4));  // Outputs: 16
+        </code>
+      </pre>
+      <p>In this example, the function square takes a number, squares it, and returns the result. The return statement allows the function to send back a value to the caller.</p>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+    <section class="main-section" id="Function_Expressions">
+      <header>Function Expressions</header>
+      <p>In JavaScript, you can also define functions as expressions, which are often assigned to variables. Function expressions can be anonymous (without a name) or named.</p>
+      <p>Example of an anonymous function expression:</p>
+      <pre>
+        <code>
+          const add = function(a, b) {
+            return a + b;
+          };
+          console.log(add(2, 3));  // Outputs: 5
+        </code>
+      </pre>
+      <p>In this case:</p>
+      <ul>
+        <li>add is the variable that holds the function.</li>
+        <li>The function doesn't have a name, so it's considered an anonymous function.</li>
+      </ul>
+      <p>Function expressions are often used when you want to pass a function as an argument to another function or when you don't need to reuse the function elsewhere.</p>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+    <section class="main-section" id="Arrow_Functions">
+      <header>Arrow Functions</header>
+      <p>Arrow functions are a concise way to write functions introduced in ES6. They have a shorter syntax than traditional function expressions and behave slightly differently, especially regarding the this keyword.</p>
+      <p>Example of an arrow function:</p>
+      <pre>
+        <code>
+          const divide = (a, b) => a / b;
+          console.log(divide(10, 2));  // Outputs: 5
+        </code>
+      </pre>
+      <p>The syntax is much cleaner:</p>
+      <ul>
+        <li>const divide = assigns the function to the variable divide.</li>
+        <li>(a, b) are the parameters.</li>
+        <li>=> is the arrow function syntax.</li>
+        <li>a / b is the function body, which implicitly returns the result.</li>
+      </ul>
+      <p>Arrow functions are commonly used for short, one-line functions, and they are especially useful in situations involving callbacks or higher-order functions.</p>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+    <section class="main-section" id="Common_Pitfalls_and_Best_Practices">
+      <header>Common Pitfalls and Best Practices</header>
+      <p>Here are a few common mistakes when working with functions, along with best practices to follow:</p>
+      <ul>
+        <li>Mistake 1: Forgetting to return a value</li>
+        <p>If your function should return a result but you forget to use the return keyword, your function will return undefined by default.</p>
+        <pre>
+          <code>
+            function add(a, b) {
+              a + b;  // Forgot to return the result
+            }
+            console.log(add(2, 3));  // Outputs: undefined
+          </code>
+        </pre>
+        <li>Mistake 2: Misunderstanding parameters and arguments</li>
+        <p>Be careful to correctly pass arguments that match the function's parameters. If a parameter is missing or misnamed, your function may behave unexpectedly.</p>
+        <li>Best Practice: Use descriptive names for functions and parameters</li>
+        <p>Give your functions and parameters clear, meaningful names to make your code more readable. Instead of naming a function f, name it calculateSum or getUserData to describe its purpose.</p>
+        <li>Best Practice: Keep functions small and focused</li>
+        <p>A good rule of thumb is that functions should do one thing and do it well. This keeps your functions easier to understand and maintain.</p>
+      </ul>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+    <section class="main-section" id="Additional_Resources">
+      <header>Additional Resources</header>
+      <p>For more detailed information on JavaScript functions, check out these resources:</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">MDN Web Docs - Functions</a></li>
+        <li><a href="https://javascript.info/function-basics">JavaScript.info - Functions</a></li>
+        <li><a href="https://www.w3schools.com/js/js_functions.asp">W3Schools - JavaScript Functions</a></li>
+      </ul>
+      <div class="quiz-container">
+            <button class="quiz-button">Take a Quiz</button>
+      </div>
+    </section>
+  </main>
+</html>
