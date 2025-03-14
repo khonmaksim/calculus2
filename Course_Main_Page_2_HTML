@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course page</title>
+  </head>
+  <body>
+    <header>
+      <p>Calculus II</p>
+    </header>
+    <main>
+      <ul>
+        <li>
+          <div class="clickable">
+            <h3>1. Vector-Valued Functions and Motion in Space</h3>
+            <p>This chapter studies vector-valued functions—functions that output vectors instead of single numbers.</p>
+          </div>
+        </li>
+        <li>
+          <div class="clickable">
+            <h3>2. Partial Derivatives</h3>
+            <p>This chapter extends single-variable calculus to functions of several variables and introduces partial derivatives.</p>
+          </div>
+        </li>
+        <li>
+          <div class="clickable">
+            <h3>3. Multiple Integrals</h3>
+            <p>This chapter introduces double and triple integrals, which extend single integrals to functions of two or three variables, representing areas and volumes.</p>
+          </div>
+        </li>
+        <li>
+          <div class="clickable">
+            <h3>4. Integrals and Vector Fields</h3>
+            <p>This chapter introduces line and surface integrals, which help analyze work, mass, fluid flow, and electromagnetic forces.</p>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <div class="cta-container">
+        <p>Ready to learn more? Check out the other courses below:</p>
+        <button class="cta-button">Next Course</button>
+        <button class="cta-button">Contact Us</button>
+      </div>
+    </footer>
+  </body>
+</html>
