@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Verdana', sans-serif;
     background-color: #F3F4F6;
     color: #333333;
     margin: 0;
@@ -76,16 +76,37 @@ h2 {
 }
 
 /* Contact Links */
-a {
+.contact {
     color: #00B4D8;
     text-decoration: none;
     font-weight: bold;
 }
 
-a:hover {
+.contact:hover {
     text-decoration: underline;
 }
 
 #contacts ul {
   list-style: none;
+}
+
+#chapters p {
+  background: linear-gradient(90deg, #00B4D8, #7209B7);
+  color: #FFFFFF;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.chapter a {
+  text-decoration: none;
+  color: white;
+}
+
+.chapter:hover {
+    background-color: #4CC9F0;
 }
