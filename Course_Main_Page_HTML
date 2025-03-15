@@ -22,16 +22,19 @@
       </section>
       <section id="intro">
         <h2>Introduction</h2>
-        <p>In this course, you will learn fundamental concepts related to vectors, double integrals, partial derivatives of functions, and more. The course is completely free and accessible to everyone. If you're interested, you can register by filling out a short form below.</p>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input type="submit" id="submit" value="GET STARTED">
-            </form>
+        <p>In this course, you will learn fundamental concepts related to vectors, double integrals, partial derivatives of functions, and more. The course is completely free and accessible to everyone. If you're interested, you can just press buttons bellow, no registration is required.</p>
+      </section>
+      <section id="chapters">
+        <p class="chapter"><a href="">Vector-Valued Functions and Motion in Space</a></p>
+        <p class="chapter"><a href="">Partial Derivatives</a></p>
+        <p class="chapter"><a href="">Multiple Integrals</a></p>
+        <p class="chapter"><a href="">Integrals and Vector Fields</a></p>
       </section>
       <section id="contacts">
         <h2>Contacts</h2>
         <ul>
           <li>Email: zakirnurbol46@gmail.com / dednomad111@gmail.com</li>
-          <li>LinkedIn: <a href="www.linkedin.com/in/nurbolzakir">Nurbol Zakir</a> / <a href="https://www.linkedin.com/in/maksimkhon/">Maksim Khon</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/nurbolzakir" class="contact">Nurbol Zakir</a> / <a href="https://www.linkedin.com/in/maksimkhon/"class="contact">Maksim Khon</a></li>
         </ul>
       </section>
     </main>
