@@ -1,0 +1,31 @@
+<section class="main-section" id="What_is_a_Function?">
+      <header>1.1 Curves in Space and Their Tangents</header>
+      <div class="chapter-container">
+        <div class="subchapter">
+          <p>When a particle moves over a time period I, its position is given by three functions:</p>
+          <p class="math">$$x = f(t), y = g(t), \text{ and } z = h(t) \text{ for } t \in I.$$</p>
+          <p>As t changes, the points (f(t), g(t), h(t)) form a curve in space—this is the particle's path. We can also describe the position with a vector:</p>
+          <p class="math">$$r(t) = f(t)i + g(t)j + h(t)k,$$</p>
+          <p>where f, g, and h are the components of the position vector. The curve traced by r(t) as time goes by is the particle’s path (see Fig).</p>
+          <p><strong>DEFINITION</strong> The vector function $$r(t) = f(t)i + g(t)j + h(t)k$$ has a derivative (is differentiable) at t if ƒ, g, and h have derivatives at t. The derivative is the vector function $$r'(t) = \frac{dr}{dt} = \lim_{\Delta t \to 0} \frac{r(t + \Delta t) - r(t)}{\Delta t} = \frac{df}{dt} i + \frac{dg}{dt} j + \frac{dh}{dt} k$$</p>
+          <p>If r is the position vector of a particle moving along a smooth curve in space, then v(t) = dr/dt is the particle’s velocity vector, tangent to the curve. At any time t, the direction of v is the direction of motion, the magnitude of v is the particle’s speed, and the derivative a = dv/dt, when it exists, is the particle’s acceleration vector.</p>
+          <div class="example">
+            <p><strong>EXAMPLE</strong> Find the velocity, speed, and acceleration of a particle whose motion in space is given by the position vector $$r(t) = 2 \cos t i + 2 \sin t j + 5 \cos^2 t k$$</p>
+            <p><strong>Solution</strong> The velocity and acceleration vectors at time t are</p>
+            <p class="math">$$v(t) = r'(t) = -2 \sin t i + 2 \cos t j - 10 \cos t \sin t k = -2 \sin t i + 2 \cos t j - 5 \sin 2t k,$$</p>
+            <p class="math">$$a(t) = r''(t) = -2 \cos t i - 2 \sin t j - 10 \cos 2t k,$$</p>
+            <p>and the speed is</p>
+            <p class="math">$$|v(t)| = \sqrt{(-2 \sin t)^2 + (2 \cos t)^2 + (-5 \sin 2t)^2} = \sqrt{4 + 25 \sin^2 2t}.$$</p>
+            <p>When t = 7π/4, we have</p>
+            <p class="math">$$v(7\pi/4) = \sqrt{2}i + \sqrt{2}j + 5k, \quad a(7\pi/4) = -\sqrt{2}i + \sqrt{2}j, \quad |v(7\pi/4)| = \sqrt{29}.$$</p>
+          </div>
+          <p>In Exercises, r(t) is the position of a particle in space at time t. Find the particle’s velocity and acceleration vectors. Then find the particle’s speed and direction of motion(v/|v|) at the given value of t. Write the particle’s velocity at that time as the product of its speed and direction.</p>
+          <p class="math">$$r(t) = (t + 1)i + (t^2 - 1)j + 2t k, \quad t = 1$$</p>
+          <p class="math">$$r(t) = (1 + t)i + \frac{t^2}{\sqrt{2}} j + \frac{t^3}{3} k, \quad t = 1$$</p>
+          <p class="math">$$r(t) = (2 \cos t)i + (3 \sin t)j + 4t k, \quad t = \pi/2$$</p>
+        </div>
+        <div class="quiz-container">
+          <button class="quiz-button">Take a Quiz</button>
+        </div>
+        </div>
+    </section>
