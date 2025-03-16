@@ -2,13 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Course Main Page</title>
   </head>
   <body>
     <header id="header">
-      <p>Calculus II</p>
+      <p><a href="">CALCULUS II</a></p>
       <nav id="nav-bar">
         <a href="#about" class="nav-link">About</a>
         <a href="#intro" class="nav-link">Introduction</a>
@@ -25,10 +31,10 @@
         <p>In this course, you will learn fundamental concepts related to vectors, double integrals, partial derivatives of functions, and more. The course is completely free and accessible to everyone. If you're interested, you can just press buttons bellow, no registration is required.</p>
       </section>
       <section id="chapters">
-        <p class="chapter"><a href="">Vector-Valued Functions and Motion in Space</a></p>
-        <p class="chapter"><a href="">Partial Derivatives</a></p>
-        <p class="chapter"><a href="">Multiple Integrals</a></p>
-        <p class="chapter"><a href="">Integrals and Vector Fields</a></p>
+        <div class="chapter"><a href="">Vector-Valued Functions and Motion in Space</a></div>
+        <div class="chapter"><a href="">Partial Derivatives</a></div>
+        <div class="chapter"><a href="">Multiple Integrals</a></div>
+        <div class="chapter"><a href="">Integrals and Vector Fields</a></div>
       </section>
       <section id="contacts">
         <h2>Contacts</h2>
