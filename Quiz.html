@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partial Derivatives Quiz</title>
+    <link rel="stylesheet" href="Quiz.css">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <header id="header">
+        <p><a href="">CALCULUS II</a></p>
+    </header>
+    
+    <main>
+        <section class="quiz-container">
+            <h1>Partial Derivatives Quiz</h1>
+            
+            <form id="quiz-form">
+                <div class="question">Find \( f_x \) and \( f_y \) for \( f(x, y) = 2x^2 - 3y - 4 \)</div>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="1"> \( f_x = 4x, f_y = -3 \)</label>
+                    <label><input type="radio" name="q1" value="2"> \( f_x = 2x, f_y = -3y \)</label>
+                    <label><input type="radio" name="q1" value="3"> \( f_x = 4x - 3, f_y = -4 \)</label>
+                </div>
+                
+                <div class="question">Find \( f_x \) and \( f_y \) for \( f(x, y) = (x^2 - 1)(y + 2) \)</div>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="1"> \( f_x = 2x(y + 2), f_y = x^2 - 1 \)</label>
+                    <label><input type="radio" name="q2" value="2"> \( f_x = 2x(y - 2), f_y = x^2 + 1 \)</label>
+                    <label><input type="radio" name="q2" value="3"> \( f_x = x(y + 2), f_y = x^2 + 1 \)</label>
+                </div>
+                
+                <div class="question">Find \( f_x \), \( f_y \), and \( f_z \) for \( f(x, y, z) = 1 + xy^2 - 2z^2 \)</div>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="1"> \( f_x = y^2, f_y = 2xy, f_z = -4z \)</label>
+                    <label><input type="radio" name="q3" value="2"> \( f_x = 2y, f_y = xy^2, f_z = -2z \)</label>
+                    <label><input type="radio" name="q3" value="3"> \( f_x = xy, f_y = y^2, f_z = -4z \)</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
