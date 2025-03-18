@@ -1,36 +1,94 @@
-body {
-    font-family: sans-serif;
-    background: linear-gradient(90deg, #00B4D8, #7209B7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+      font-family: Roboto, 'Verdana', sans-serif;
+      background-color: #F3F4F6;
+      color: #333333;
+      margin: 0 ;
+      margin-bottom: 40px;
+      padding: 0;
+      
+  }
 
-.quiz-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 400px;
-}
+  body h2{
+    font-family: Tektur, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+  }
+  
+  /* Header */
+  #header {
+      font-family: Tektur, Verdana;
+      background: linear-gradient(90deg, #00B4D8, #7209B7);
+      color: #FFFFFF;
+      padding: 15px 0;
+      font-size: 34px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 10%;
+      max-height: 70px;   
+  }
 
-.question {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
+  #quiz h2 {
+    text-align: center;
+  }
 
-.options label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-button {
-    background-color: #00B4D8;
+  #header p a {
+    text-decoration: none;
     color: white;
-    padding: 10px 20px;
+  }
+
+  #header p:hover {
+    transition: 0.3s;
+    transform: translate(3px, -3px);
+  }
+  
+  
+  /* Sections */
+  section {
+      background: #FFFFFF;
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+  }
+  
+  /* Headings */
+  h2 {
+      color: #7209B7;
+  }
+  
+
+  .question {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .options ul li {
+    
+    list-style: none;
+  }
+
+  button {
+    color: white;
+    background-color: #00B4D8;
+    font-size: 23px;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    border-radius: 4px;
+    padding: 15px 60px;
+  }
+  
+  .button-cont {
+    display: flex;
+    justify-content: center ;
+  }
+
+  .question {
+    padding-top: 30px;
+  }
