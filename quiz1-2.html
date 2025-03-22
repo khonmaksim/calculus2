@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="Quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- MathJax for rendering LaTeX -->
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <title>Calculus Exercise</title>
+  </head>
+  <body>
+    <header id="header">
+      <p><a href="#">CALCULUS II</a></p>
+    </header>
+
+    <main>
+      <section id="quiz">
+        <h2>Evaluating Integrals and Solving Initial Value Problems</h2>
+        <form id="quiz-form">
+          <!-- Question 1: Integral -->
+          <div class="question">
+            Q1. Evaluate the integral:
+            \[
+            \int_0^1 \left( t^3 \hat{i} + 7 \hat{j} + (t+1) \hat{k} \right) \, dt
+            \]
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="1">
+                  \( \left( \frac{1}{4} \hat{i}, 7 \hat{j}, 2 \hat{k} \right) \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="2">
+                  \( \left( \frac{1}{4} \hat{i}, 7 \hat{j}, \hat{k} \right) \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="3">
+                  \( \left( \frac{1}{2} \hat{i}, 7 \hat{j}, 2 \hat{k} \right) \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox1" class="solution-box">
+            <h3>Solution for Q1</h3>
+            <p>
+              The given integral is:
+              \[
+              \int_0^1 \left( t^3 \hat{i} + 7 \hat{j} + (t+1) \hat{k} \right) \, dt
+              \]
+            </p>
+            <p>
+              We can break this into components:
+              \[
+              \int_0^1 t^3 \, dt \hat{i} + \int_0^1 7 \, dt \hat{j} + \int_0^1 (t+1) \, dt \hat{k}
+              \]
+            </p>
+            <p>
+              For the \( \hat{i} \) component:
+              \[
+              \int_0^1 t^3 \, dt = \left[ \frac{t^4}{4} \right]_0^1 = \frac{1}{4}
+              \]
+            </p>
+            <p>
+              For the \( \hat{j} \) component:
+              \[
+              \int_0^1 7 \, dt = 7 \cdot 1 = 7
+              \]
+            </p>
+            <p>
+              For the \( \hat{k} \) component:
+              \[
+              \int_0^1 (t+1) \, dt = \left[ \frac{t^2}{2} + t \right]_0^1 = \left( \frac{1}{2} + 1 \right) = \frac{3}{2}
+              \]
+            </p>
+            <p>
+              Therefore, the result of the integral is:
+              \[
+              \left( \frac{1}{4} \hat{i}, 7 \hat{j}, \frac{3}{2} \hat{k} \right)
+              \]
+            </p>
+            <p>
+              So, the correct answer is:
+              \( \left( \frac{1}{4} \hat{i}, 7 \hat{j}, 2 \hat{k} \right) \)
+            </p>
+          </div>
+
+          <!-- Question 2: Differential Equation 1 -->
+          <div class="question">
+            Q2. Solve the initial value problem:
+            \[
+            \frac{dr}{dt} = -t \hat{i} - t \hat{j} - t \hat{k}, \quad r(0) = \hat{i} + 2 \hat{j} + 3 \hat{k}
+            \]
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="1">
+                  \( r(t) = (1 - \frac{t^2}{2}) \hat{i} + (2 - \frac{t^2}{2}) \hat{j} + (3 - \frac{t^2}{2}) \hat{k} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="2">
+                  \( r(t) = (1 - t) \hat{i} + (2 - t) \hat{j} + (3 - t) \hat{k} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="3">
+                  \( r(t) = (1 - t^2) \hat{i} + (2 - t^2) \hat{j} + (3 - t^2) \hat{k} \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox2" class="solution-box">
+            <h3>Solution for Q2</h3>
+            <p>
+              The differential equation is:
+              \[
+              \frac{dr}{dt} = -t \hat{i} - t \hat{j} - t \hat{k}
+              \]
+              Integrating each component with respect to \( t \), we get:
+            </p>
+            <p>
+              For the \( \hat{i} \) component:
+              \[
+              \int -t \, dt = -\frac{t^2}{2} + C_1
+              \]
+            </p>
+            <p>
+              For the \( \hat{j} \) component:
+              \[
+              \int -t \, dt = -\frac{t^2}{2} + C_2
+              \]
+            </p>
+            <p>
+              For the \( \hat{k} \) component:
+              \[
+              \int -t \, dt = -\frac{t^2}{2} + C_3
+              \]
+            </p>
+            <p>
+              Thus, the general solution is:
+              \[
+              r(t) = \left( -\frac{t^2}{2} + C_1 \right) \hat{i} + \left( -\frac{t^2}{2} + C_2 \right) \hat{j} + \left( -\frac{t^2}{2} + C_3 \right) \hat{k}
+              \]
+            </p>
+            <p>
+              Using the initial condition \( r(0) = \hat{i} + 2 \hat{j} + 3 \hat{k} \), we find:
+              \[
+              C_1 = 1, \quad C_2 = 2, \quad C_3 = 3
+              \]
+            </p>
+            <p>
+              Therefore, the solution is:
+              \[
+              r(t) = \left( 1 - \frac{t^2}{2} \right) \hat{i} + \left( 2 - \frac{t^2}{2} \right) \hat{j} + \left( 3 - \frac{t^2}{2} \right) \hat{k}
+              \]
+            </p>
+            <p>
+              So, the correct answer is:
+              \( r(t) = (1 - \frac{t^2}{2}) \hat{i} + (2 - \frac{t^2}{2}) \hat{j} + (3 - \frac{t^2}{2}) \hat{k} \)
+            </p>
+          </div>
+
+          <!-- Question 3: Differential Equation 2 -->
+          <div class="question">
+            Q3. Solve the initial value problem:
+            \[
+            \frac{dr}{dt} = (180t) \hat{i} + (180t - 16t^2) \hat{j}, \quad r(0) = 100 \hat{j}
+            \]
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q3" value="1">
+                  \( r(t) = 90t^2 \hat{i} + 100t \hat{j} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q3" value="2">
+                  \( r(t) = 90t^2 \hat{i} + (90t^2 - \frac{16t^3}{3} + 100) \hat{j} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q3" value="3">
+                  \( r(t) = 90t^2 \hat{i} + 100 \hat{j} \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox3" class="solution-box">
+            <h3>Solution for Q3</h3>
+            <p>
+              The differential equation is:
+              \[
+              \frac{dr}{dt} = (180t) \hat{i} + (180t - 16t^2) \hat{j}
+              \]
+            </p>
+            <p>
+              We integrate each component with respect to \( t \):
+            </p>
+            <p>
+              For the \( \hat{i} \)-component:
+              \[
+              \int 180t \, dt = 90t^2 + C_1
+              \]
+            </p>
+            <p>
+              For the \( \hat{j} \)-component:
+              \[
+              \int (180t - 16t^2) \, dt = 90t^2 - \frac{16t^3}{3} + C_2
+              \]
+            </p>
+            <p>
+              Using the initial condition \( r(0) = 100 \hat{j} \), we find:
+              \[
+              C_1 = 0, \quad C_2 = 100
+              \]
+            </p>
+            <p>
+              Therefore, the solution is:
+              \[
+              r(t) = 90t^2 \hat{i} + \left( 90t^2 - \frac{16t^3}{3} + 100 \right) \hat{j}
+              \]
+            </p>
+            <p>
+              So, the correct answer is:
+              \( r(t) = 90t^2 \hat{i} + (90t^2 - \frac{16t^3}{3} + 100) \hat{j} \)
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="button-cont">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById('quiz-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Show solution boxes:
+        document.getElementById('solutionBox1').style.display = 'block';
+        document.getElementById('solutionBox2').style.display = 'block';
+        document.getElementById('solutionBox3').style.display = 'block';
+
+        // Highlight the selected answer for Q1
+        const selectedQ1 = document.querySelector('input[name="q1"]:checked');
+        const solutionBox1 = document.getElementById('solutionBox1');
+        if (selectedQ1) {
+          if (selectedQ1.value == '1') {
+            selectedQ1.parentElement.style.color = 'green';
+            selectedQ1.style.backgroundColor = "green";
+            solutionBox1.style.backgroundColor = '#b4ffb4';
+          } else {
+            selectedQ1.parentElement.style.color = 'red';
+            selectedQ1.style.backgroundColor = "red";
+            solutionBox1.style.backgroundColor = '#ffc5c5';
+          }
+        }
+
+        // Highlight the selected answer for Q2
+        const selectedQ2 = document.querySelector('input[name="q2"]:checked');
+        const solutionBox2 = document.getElementById('solutionBox2');
+        if (selectedQ2) {
+          if (selectedQ2.value == '1') {
+            selectedQ2.parentElement.style.color = 'green';
+            selectedQ2.style.backgroundColor = "green";
+            solutionBox2.style.backgroundColor = '#b4ffb4';
+          } else {
+            selectedQ2.parentElement.style.color = 'red';
+            selectedQ2.style.backgroundColor = "red";
+            solutionBox2.style.backgroundColor = '#ffc5c5';
+          }
+        }
+
+        // Highlight the selected answer for Q3
+        const selectedQ3 = document.querySelector('input[name="q3"]:checked');
+        const solutionBox3 = document.getElementById('solutionBox3');
+        if (selectedQ3) {
+          if (selectedQ3.value == '2') {
+            selectedQ3.parentElement.style.color = 'green';
+            selectedQ3.style.backgroundColor = "green";
+            solutionBox3.style.backgroundColor = '#b4ffb4';
+          } else {
+            selectedQ3.parentElement.style.color = 'red';
+            selectedQ3.style.backgroundColor = "red";
+            solutionBox3.style.backgroundColor = '#ffc5c5';
+          }
+        }
+
+        let submitButton = document.querySelector('.button-cont button');
+        submitButton.textContent = 'RETURN';
+
+        // Update button functionality to redirect to another page
+        submitButton.removeEventListener('click', arguments.callee);
+        submitButton.addEventListener('click', function() {
+          window.location.href = 'your_next_page.html'; // Change this to your desired page
+        });
+      });
+    </script>
+  </body>
+</html>
