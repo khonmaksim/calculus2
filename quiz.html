@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <!-- Link to your external CSS -->
-    <link rel="stylesheet" href="quiz-gpt.css">
+    <link rel="stylesheet" href="Quiz.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -220,6 +220,15 @@
               solutionBox3.style.backgroundColor = '#ffc5c5';
             }
           }
+
+          let submitButton = document.querySelector('.button-cont button');
+          submitButton.textContent = 'RETURN';
+
+          // Update button functionality to redirect to another page
+          submitButton.removeEventListener('click', arguments.callee);
+          submitButton.addEventListener('click', function() {
+            window.location.href = 'your_next_page.html'; // Change this to your desired page
+          });
         });
     </script>
   </body>
