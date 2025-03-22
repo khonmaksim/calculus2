@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="quiz-gpt.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- MathJax for rendering LaTeX -->
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <title>quiz: Vector-Valued Functions and Motion in Space</title>
+  </head>
+  <body>
+    <header id="header">
+      <p><a href="../../main.html">CALCULUS II</a></p>
+    </header>
+
+    <main>
+      <section id="quiz">
+        <h2>QUIZ: Tangential and Normal Components of Acceleration	</h2>
+        <form id="quiz-form">
+          <!-- Question 1: Integral -->
+          <p style="font-size: 20px; font-weight: bold;"> Write the acceleration \( \mathbf{a} \) in the form \( \mathbf{a} = a_T T + a_N N \) without finding \( T \) and \( N \) (find \( a_T \) and \( a_N \)).</p>
+          
+          <div class="question">
+            Q1. 
+            \(
+            \mathbf{r}(t) = a \cos t \hat{i} + a \sin t \hat{j} + b t \hat{k}
+            \)
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="10">
+                  \( a_T = 0 \), \( a_N = a \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="1">
+                  \( a_T = a \cos t, a_N = -a \sin t \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="1">
+                  \( a_T = a \cos t, a_N = a \sin t \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox1" class="solution-box">
+            <h3>Solution for Q1</h3>
+            <p>
+              The position vector is \( \mathbf{r}(t) = a \cos t \hat{i} + a \sin t \hat{j} + b t \hat{k} \).
+            </p>
+            <p>
+              The velocity is:
+              \[
+              \mathbf{v}(t) = \frac{d}{dt}(a \cos t \hat{i} + a \sin t \hat{j} + b t \hat{k}) = -a \sin t \hat{i} + a \cos t \hat{j} + b \hat{k}.
+              \]
+            </p>
+            <p>
+              The acceleration is:
+              \[
+              \mathbf{a}(t) = \frac{d}{dt}(-a \sin t \hat{i} + a \cos t \hat{j} + b \hat{k}) = -a \cos t \hat{i} - a \sin t \hat{j}.
+              \]
+            </p>
+            <p>
+              The tangential acceleration \( a_T \) is:
+              \[
+              a_T = \frac{\mathbf{a}(t) \cdot \mathbf{v}(t)}{|\mathbf{v}(t)|} = -a \sin t \cdot a \cos t + a \cos t \cdot a \sin t = -a \sin t \cdot a \cos t + a \cos t \cdot a \sin t = 0.
+              \]
+            </p>
+            <p>
+              The normal acceleration \( a_N \) is:
+              \[
+              a_N = \frac{|\mathbf{a}(t) \times \mathbf{v}(t)|}{|\mathbf{v}(t)|} = a.
+              \]
+            </p>
+            <p>
+              So, the correct answer is:
+              \( a_T = 0 \) and \( a_N = a \).
+            </p>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="question">
+            Q2. 
+            \(
+            \mathbf{r}(t) = 3 \sin t \hat{i} + 3 \cos t \hat{j} + 4 t \hat{k}
+            \)
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="10">
+                  \( T = \frac{1}{5} (3 \cos t, -3 \sin t, 0), N = (- \sin t, - \cos t \hat{j}), B = -\frac{1}{5} (4 \cos t, - 4 \sin t, - \hat{k}) \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="1">
+                  \( T = (3 \cos t, 3 \sin t, 0), N = (- \sin t, - \cos t \hat{j}), B = -\frac{1}{5} (4 \cos t, - 4 \sin t, - \hat{k}) \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="1">
+                  \( T = \left(\frac{1}{\sqrt{10}}, \frac{1}{\sqrt{10}}, 0\right), N = \left(0, \frac{1}{\sqrt{2}}, 0\right), B = \left(0, 0, \frac{1}{\sqrt{2}}\right), k = 1, t = 1 \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox2" class="solution-box">
+            <h3>Solution for Q2</h3>
+            <p>
+              The position vector is \( \mathbf{r}(t) = 3 \sin t \hat{i} + 3 \cos t \hat{j} + 4 t \hat{k} \).
+            </p>
+            <p>
+              The velocity is:
+              \[
+              \mathbf{v}(t) = \frac{d}{dt}(3 \sin t \hat{i} + 3 \cos t \hat{j} + 4 t \hat{k}) = 3 \cos t \hat{i} - 3 \sin t \hat{j} + 4 \hat{k}.
+              \]
+            </p>
+            <p>
+              The magnitude of the velocity is:
+              \[
+              |\mathbf{v}(t)| = \sqrt{(3 \cos t)^2 + (-3 \sin t)^2 + 4^2} = \sqrt{9 \cos^2 t + 9 \sin^2 t + 16} = \sqrt{25} = 5.
+              \]
+            </p>
+            <p>
+              The unit tangent vector is:
+              \[
+              T = \frac{\mathbf{v}(t)}{|\mathbf{v}(t)|} = \frac{1}{5} (3 \cos t \hat{i} - 3 \sin t \hat{j} + 4 \hat{k}).
+              \]
+            </p>
+            <p>
+              The second derivative is:
+              \[
+              \mathbf{a}(t) = \frac{d}{dt}(3 \cos t \hat{i} - 3 \sin t \hat{j} + 4 \hat{k}) = -3 \sin t \hat{i} - 3 \cos t \hat{j}.
+              \]
+            </p>
+            <p>
+              The normal vector is:
+              \[
+              N = \frac{\mathbf{a}(t)}{|\mathbf{a}(t)|} = - \sin t \hat{i} -  \cos t \hat{j}.
+              \]
+            </p>
+            <p>
+              The binormal vector is:
+              \[
+              B = T \times N.
+              \]
+              \[
+              B = -\frac{1}{5} (4 \cos t \hat{i} - 4 \sin t \hat{j} - \hat{k}).
+              \]
+            </p>
+            <p>
+              The curvature \( k \) and torsion \( t \) can be calculated from the second derivative of the position and the cross-product formulas for \( B \).
+            </p>
+            <p>
+              So, the correct answer is the first one.
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="button-cont">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById('quiz-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Show solution boxes:
+        document.getElementById('solutionBox1').style.display = 'block';
+        document.getElementById('solutionBox2').style.display = 'block';
+
+        // Highlight the selected answer for Q1
+        const selectedQ1 = document.querySelector('input[name="q1"]:checked');
+          const solutionBox1 = document.getElementById('solutionBox1');
+          if (selectedQ1) {
+            if (selectedQ1.value == '10') {
+              selectedQ1.parentElement.style.color = 'green';
+              selectedQ1.style.backgroundColor = "green";
+              solutionBox1.style.backgroundColor = '#b4ffb4';
+            } else {
+              selectedQ1.parentElement.style.color = 'red';
+              selectedQ1.style.backgroundColor = "red";
+              solutionBox1.style.backgroundColor = '#ffc5c5';
+            }
+          }
+    
+          // Highlight the selected answer for Q2
+          const selectedQ2 = document.querySelector('input[name="q2"]:checked');
+          const solutionBox2 = document.getElementById('solutionBox2');
+          if (selectedQ2) {
+            if (selectedQ2.value == '10') {
+              selectedQ2.parentElement.style.color = 'green';
+              selectedQ2.style.backgroundColor = "green";
+              solutionBox2.style.backgroundColor = '#b4ffb4';
+            } else {
+              selectedQ2.parentElement.style.color = 'red';
+              selectedQ2.style.backgroundColor = "red";
+              solutionBox2.style.backgroundColor = '#ffc5c5';
+            }
+          }
+
+        let submitButton = document.querySelector('.button-cont button');
+        submitButton.textContent = 'RETURN';
+
+        // Update button functionality to redirect to another page
+        submitButton.removeEventListener('click', arguments.callee);
+        submitButton.addEventListener('click', function() {
+          window.location.href = '../ch1.html'; // Change this to your desired page
+        });
+        
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+  <main id="main-doc">
+    <section id="JavaScript_Functions" class="main-name">
+      <nav id="navbar">
+        <header><a href="../main.html">CALCULUS II</a></header>
+        <ul>
+          <li><a href="#Introduction" class="nav-link"><i id="fas" class="fas fa-bars icon"></i>    Overview</a></li>
+          <li><a href="#What_is_a_Function?" class="nav-link"><i id="fas" class="fas fa-bars icon"></i>    1.1 Curves in Space and Their Tangents</a></li>
+          <li><a href="#Declaring_a_Function" class="nav-link"><i id="fas" class="fas fa-bars icon"></i>    1.2 Integrals of Vector Functions</a></li>
+          <li><a href="#Function_Parameters_and_Arguments" class="nav-link"><i id="fas" class="fas fa-bars icon"></i>    1.3 Arc Length in Space</a></li>
+          <li><a href="#Returning_Values_from_Functions" class="nav-link"><i id="fas" class="fas fa-bars icon"></i>    1.4 Curvature and Normal Vectors of a Curve</a></li>
+          <li><a href="#Function_Expressions" class="nav-link"><i id="fas" class="fas fa-bars icon">  </i>    1.5 Tangential and Normal Components of Acceleration</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="main-section" id="Introduction">
+      <header>Overview</header>
+      <div class="chapter-container">
+        <p class="overview">
+          <strong>OVERVIEW</strong> This chapter introduces the calculus of vector-valued functions. These functions take real numbers as inputs but output vectors. Changes in these functions affect both magnitude and direction, making derivatives and integrals vectors as well. This calculus helps describe the motion of objects in planes or space, with velocities and accelerations represented as vectors. It also covers concepts that explain how an object's path can twist and turn in space. 
+          </p>
+      </div>  
+    </section>
+    <section class="main-section" id="What_is_a_Function?">
+      <header>1.1 Curves in Space and Their Tangents</header>
+      <div class="chapter-container">
+        <div class="subchapter">
+          <p>When a particle moves over a time period I, its position is given by three functions:</p>
+          <p class="math">$$x = f(t), y = g(t), \text{ and } z = h(t) \text{ for } t \in I.$$</p>
+          <p>As t changes, the points (f(t), g(t), h(t)) form a curve in space—this is the particle's path. We can also describe the position with a vector:</p>
+          <p class="math">$$r(t) = f(t)i + g(t)j + h(t)k,$$</p>
+          <p>where f, g, and h are the components of the position vector. The curve traced by r(t) as time goes by is the particle’s path (see Fig).</p>
+          <img src="images/1.png" alt="img">
+          <div class="def">
+            <p><strong>DEFINITION</strong> The vector function $$r(t) = f(t)i + g(t)j + h(t)k$$ has a derivative (is differentiable) at t if ƒ, g, and h have derivatives at t. The derivative is the vector function $$r'(t) = \frac{dr}{dt} = \lim_{\Delta t \to 0} \frac{r(t + \Delta t) - r(t)}{\Delta t} = \frac{df}{dt} i + \frac{dg}{dt} j + \frac{dh}{dt} k$$</p>
+          </div>
+          <p>If r is the position vector of a particle moving along a smooth curve in space, then v(t) = dr/dt is the particle’s velocity vector, tangent to the curve. At any time t, the direction of v is the direction of motion, the magnitude of v is the particle’s speed, and the derivative a = dv/dt, when it exists, is the particle’s acceleration vector.</p>
+          <div class="example">
+            <p><strong>EXAMPLE</strong> Find the velocity, speed, and acceleration of a particle whose motion in space is given by the position vector $$r(t) = 2 \cos t i + 2 \sin t j + 5 \cos^2 t k$$</p>
+            <p><strong>Solution</strong> The velocity and acceleration vectors at time t are</p>
+            <p class="math">$$v(t) = r'(t) = -2 \sin t i + 2 \cos t j - 10 \cos t \sin t k$$</p>
+            <p class="math">$$a(t) = r''(t) = -2 \cos t i - 2 \sin t j - 10 \cos 2t k,$$</p>
+            <p>and the speed is</p>
+            <p class="math">$$|v(t)| = \sqrt{(-2 \sin t)^2 + (2 \cos t)^2 + (-5 \sin 2t)^2} = \sqrt{4 + 25 \sin^2 2t}.$$</p>
+            <p>When t = 7π/4, we have</p>
+            <p class="math">$$v(7\pi/4) = \sqrt{2}i + \sqrt{2}j + 5k$$</p>
+            <p class="math">$$a(7\pi/4) = -\sqrt{2}i + \sqrt{2}j$$</p>
+            <p class="math">$$|v(7\pi/4)| = \sqrt{29}$$</p>
+          </div>
+          <p>In Exercises, r(t) is the position of a particle in space at time t. Find the particle’s velocity and acceleration vectors. Then find the particle’s speed and direction of motion(v/|v|) at the given value of t. Write the particle’s velocity at that time as the product of its speed and direction.</p>
+          <p class="math">$$r(t) = (t + 1)i + (t^2 - 1)j + 2t k, \quad t = 1$$</p>
+          <p class="math">$$r(t) = (1 + t)i + \frac{t^2}{\sqrt{2}} j + \frac{t^3}{3} k, \quad t = 1$$</p>
+          <p class="math">$$r(t) = (2 \cos t)i + (3 \sin t)j + 4t k, \quad t = \pi/2$$</p>
+        </div>
+        <div class="quiz-container">
+          <a href="quizes/quiz1-1.html">
+          <button class="quiz-button">Take a Quiz</button>
+        </a>
+        </div>
+        </div>
+    </section>
+    <section class="main-section" id="Declaring_a_Function">
+      <header>1.2 Integrals of Vector Functions</header>
+      <div class="chapter-container">
+      <div class="subchapter">
+        <p>To integrate a vector function, we integrate each of its components</p>
+        <p class="math">$$\int_0^\pi ((\cos t) i + j - 2t k) dt = (\int_0^\pi \cos t dt) i + (\int_0^\pi dt) j - (\int_0^\pi 2t dt) k$$</p>
+        <p class="math">$$= (\sin \pi - \sin 0) i + (\pi - 0) j - (\pi^2 - 0) k = \pi j - \pi^2 k$$</p>
+        <div class="example">
+          <p><strong>EXAMPLE</strong> Suppose we do not know the path of a hang glider, but only its acceleration vector $$\vec{a}(t) = -(3 \cos t)\mathbf{i} - (3 \sin t)\mathbf{j} + 2\mathbf{k}$$. We also know that initially (at time t = 0) the glider departed from the point (4, 0, 0) with velocity v(0) = 3j. Find the glider’s position as a function of t.</p>
+          <p><strong>Solution</strong> Our goal is to find r(t) knowing</p>
+          <p>The differential equation: $$\vec{a} = \frac{d^2\vec{r}}{dt^2} =-(3 \cos t)\mathbf{i}- (3 \sin t)\mathbf{j} + 2\mathbf{k}$$</p>
+          <p>The initial conditions: $$\vec{v}(0) = 3\mathbf{j}$$ and $$\vec{r}(0) = 4\mathbf{i} + 0\mathbf{j} + 0\mathbf{k}$$.</p>
+          <p>Integrating both sides of the differential equation with respect to t gives</p>
+          <p class="math">$$\vec{v}(t) =-(3 \sin t)\mathbf{i} + (3 \cos t)\mathbf{j} + 2t \mathbf{k} + \vec{C_1}$$</p>
+          <p>We use v(0) = 3j to find C1:</p>
+          <p class="math">$$3\mathbf{j} =-(3 \sin 0)\mathbf{i} + (3 \cos 0)\mathbf{j} + (0)\mathbf{k} + \vec{C_1}$$</p>
+          <p class="math">$$3\mathbf{j} = 3\mathbf{j} + \vec{C_1} \quad \vec{C_1} = 0.$$</p>
+          <p>The glider’s velocity as a function of time is</p>
+          <p class="math">$$\frac{d\vec{r}}{dt} = \vec{v}(t) =-(3 \sin t)\mathbf{i} + (3 \cos t)\mathbf{j} + 2t \mathbf{k}.$$</p>
+          <p>Integrating both sides of this last differential equation gives</p>
+          <p class="math">$$\vec{r}(t) = (3 \cos t)\mathbf{i} + (3 \sin t)\mathbf{j} + t^2 \mathbf{k} + \vec{C_2}.$$</p>
+          <p>We then use the initial condition r(0) = 4i to find C2:</p>
+          <p class="math">$$4\mathbf{i} = (3 \cos 0)\mathbf{i} + (3 \sin 0)\mathbf{j} + (0^2)\mathbf{k} + \vec{C_2}$$</p>
+          <p class="math">$$4\mathbf{i} = 3\mathbf{i} + (0)\mathbf{j} + (0)\mathbf{k} + \vec{C_2} \quad \vec{C_2} = \mathbf{i}.$$</p>
+          <p>The glider’s position as a function of t is</p>
+          <p class="math">$$\vec{r}(t) = (1 + 3 \cos t)\mathbf{i} + (3 \sin t)\mathbf{j} + t^2 \mathbf{k}.$$</p>
+          <p>This is the path of the glider shown in Figure.</p>
+        
+        </div>
+        <img src="images/2.png" alt="img">
+        <p>Evaluate the integrals</p>
+        <p class="math">$$\int_0^1 t^3 \mathbf{i} + 7 \mathbf{j} + (t+1) \mathbf{k} dt$$</p>
+        <p>Solve the initial value problems</p>
+        <p>Differential equation: $$\frac{d\vec{r}}{dt} =-t \mathbf{i}-t \mathbf{j}-t \mathbf{k}$$</p>
+        <p>Initial condition: $$\vec{r}(0)= \mathbf{i} +2\mathbf{j}+3\mathbf{k}$$ </p>
+        <p>Differential equation: $$\frac{d\vec{r}}{dt} =(180t)\mathbf{i} + (180t-16t^2)\mathbf{j}$$</p>
+        <p>Initial condition: $$\vec{r}(0)=100\mathbf{j}$$</p>
+      </div>
+      </div>
+        <div class="quiz-container">
+          <a href="quizes/quiz1-2.html">
+              <button class="quiz-button">Take a Quiz</button>
+            </a>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Function_Parameters_and_Arguments">
+      
+      <header>1.3 Arc Length in Space</header>
+      <div class="chapter-container">
+        <div class="subchapter">
+          <p>The length of a smooth curve $$\vec{r}(t) = x(t)\mathbf{i} + y(t)\mathbf{j} + z(t)\mathbf{k}$$, a ≤ t ≤ b, that is traced exactly once as t increases from t = a to t = b, is</p>
+          <p class="math">$$L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2 + \left(\frac{dz}{dt}\right)^2} dt.$$</p>
+          <div class="example">
+            <p><strong>EXAMPLE</strong> A glider is soaring upward along the helix $$\vec{r}(t) = (\cos t)\mathbf{i} + (\sin t)\mathbf{j} + t\mathbf{k}$$. How long is the glider’s path from t = 0 to t = 2π?</p>
+            <p>The path segment during this time corresponds to one full turn of the helix (see Fig.). The length of this portion of the curve is</p>
+            <p class="math">$$L = \int_a^b |\vec{v}| dt = \int_0^{2\pi} \sqrt{(-\sin t)^2 + (\cos t)^2 + (1)^2} dt$$</p>
+            <p class="math">$$L = \int_0^{2\pi} \sqrt{2} dt = 2\pi\sqrt{2}$$</p>
+          </div>
+          <img src="images/03.png" alt="img">
+          <p><strong>Speed on a Smooth Curve</strong></p>
+          <p class="math">$$\frac{ds}{dt} = |\vec{v}(t)|.$$</p>
+          <p><strong>Unit Tangent Vector</strong></p>
+          <p>We already know the velocity vector $$\vec{v} = \frac{d\vec{r}}{dt}$$ is tangent to the curve r(t) and that the vector $$\mathbf{T} = \frac{\vec{v}}{|\vec{v}|}$$ is therefore a unit vector tangent to the (smooth) curve, called the unit tangent vector. You can think of the unit tangent vector as a vector of velocity’s direction.</p>
+          <div class="example">
+            <p><strong>EXAMPLE</strong> Find the unit tangent vector of the curve $$\vec{r}(t) = (1 + 3 \cos t)\mathbf{i} + (3 \sin t)\mathbf{j} + t^2\mathbf{k}$$</p>
+            <p><strong>Solution</strong> We find that $$\vec{v} = \frac{d\vec{r}}{dt} =-(3 \sin t)\mathbf{i} + (3 \cos t)\mathbf{j} + 2t\mathbf{k}$$ and $$|\vec{v}| = \sqrt{9 + 4t^2}$$. Thus, $$\mathbf{T} = \frac{\vec{v}}{|\vec{v}|} = \frac{-3 \sin t}{\sqrt{9 + 4t^2}} \mathbf{i} + \frac{3 \cos t}{\sqrt{9 + 4t^2}} \mathbf{j} + \frac{2t}{\sqrt{9 + 4t^2}} \mathbf{k}.$$</p>
+          </div>
+          <p>In Exercises, find the curve’s unit tangent vector. Also, find the length of the indicated portion of the curve.</p>
+          <ol>
+            <li class="math">$$\vec{r}(t)=(2 \cos t)\mathbf{i} +(2 \sin t)\mathbf{j}+\sqrt{5}t \mathbf{k}, \quad 0 \le t \le \pi$$</li>
+            <li class="math">$$\vec{r}(t)=(6 \sin 2t)\mathbf{i} +(6 \cos 2t)\mathbf{j}+5t \mathbf{k}, \quad 0 \le t \le \pi$$</li>
+            <li class="math">$$\vec{r}(t)= t\mathbf{i} +\frac{2}{3}t^{3/2} \mathbf{k}, \quad 0 \le t \le 8$$</li>
+          </ol>
+        </div>
+      <div class="quiz-container">
+        <a href="quizes/quiz1-3.html">
+            <button class="quiz-button">Take a Quiz</button>
+          </a>
+      </div>
+      </div>
+    </section>
+    <section class="main-section" id="Returning_Values_from_Functions">
+      <header>1.4 Curvature and Normal Vectors of a Curve</header>
+      <div class="chapter-container">
+        <div class="subchapter">
+          
+          <p>As a particle moves along a smooth curve in the plane, $$T = \frac{d\vec{r}}{ds}$$ turns as the curve bends. The rate at which T turns per unit of length along the curve is called the curvature</p>
+          <p class="math">$$\kappa = \left|\frac{d\mathbf{T}}{ds}\right|, \quad \kappa = \frac{1}{|\vec{v}|} \left|\frac{d\mathbf{T}}{dt}\right|.$$</p>
+          <p>If the curvature is large at a point then T turns sharply as the particle passes through that point.</p>
+          <img src="images/3.png" alt="img">
+          <div class="example">
+            <p><strong>EXAMPLE</strong> Here we find the curvature of a circle. We begin with $$\vec{r}(t) = (a \cos t)\mathbf{i} + (a \sin t)\mathbf{j}$$, a circle of radius a.</p>
+            <p>Then, $$\vec{v} = \frac{d\vec{r}}{dt} = -(a \sin t)\mathbf{i} + (a \cos t)\mathbf{j}$$ and $$|\vec{v}| = \sqrt{(-a \sin t)^2 + (a \cos t)^2} = \sqrt{a^2} = |a| = a.$$</p>
+            <p>From this we find $$\mathbf{T} = \frac{\vec{v}}{|\vec{v}|} = -(\sin t)\mathbf{i} + (\cos t)\mathbf{j}$$ and $$\frac{d\mathbf{T}}{dt} = -(\cos t)\mathbf{i} - (\sin t)\mathbf{j}.$$</p>
+            <p>Also, $$\left|\frac{d\mathbf{T}}{dt}\right| = \sqrt{(\cos^2 t + \sin^2 t)} = 1.$$</p>
+            <p>Hence, for any value of the parameter t, the curvature of the circle is $$\kappa = \frac{1}{|\vec{v}|} \left|\frac{d\mathbf{T}}{dt}\right| = \frac{1}{a}(1) = \frac{1}{a} = \frac{1}{\text{radius}}.$$</p>
+          </div>
+          <p>Among the vectors orthogonal to the unit tangent vector T, there is one of particular significance because it points in the direction in which the curve is turning. Principal unit normal points in the direction in which the curve is turning</p>
+          <p class="math">$$\mathbf{N} = \frac{1}{\kappa} \frac{d\mathbf{T}}{ds} \quad \text{or} \quad \mathbf{N} = \frac{\frac{d\mathbf{T}}{dt}}{\left|\frac{d\mathbf{T}}{dt}\right|}.$$</p>
+          <img src="images/4.png" alt="img">
+          <div class="example">
+            <p><strong>EXAMPLE</strong> Find T and N for the circular motion $$\vec{r}(t) = (\cos 2t)\mathbf{i} + (\sin 2t)\mathbf{j}$$</p>
+            <p><strong>Solution</strong> We first find T: $$\vec{v} = -(2 \sin 2t)\mathbf{i} + (2 \cos 2t)\mathbf{j}$$ and $$|\vec{v}| = \sqrt{4 \sin^2 2t + 4 \cos^2 2t} = 2.$$</p>
+            <p>Then, $$\mathbf{T} = \frac{\vec{v}}{|\vec{v}|} = -(\sin 2t)\mathbf{i} + (\cos 2t)\mathbf{j}.$$</p>
+            <p>From this we find $$\frac{d\mathbf{T}}{dt} = -(2 \cos 2t)\mathbf{i} - (2 \sin 2t)\mathbf{j}$$ and $$\left|\frac{d\mathbf{T}}{dt}\right| = \sqrt{4 \cos^2 2t + 4 \sin^2 2t} = 2.$$</p>
+            <p>And, $$\mathbf{N} = \frac{\frac{d\mathbf{T}}{dt}}{\left|\frac{d\mathbf{T}}{dt}\right|} = -(\cos 2t)\mathbf{i} - (\sin 2t)\mathbf{j}.$$</p>
+            <p>Notice that $$\mathbf{T} \cdot \mathbf{N} = 0$$, verifying that N is orthogonal to T. Notice too, that for the circular motion here, N points from $$\vec{r}(t)$$ toward the circle’s center at the origin.</p>
+          </div>
+        </div>
+        <div class="quiz-container">
+          <a href="quizes/quiz1-4.html">
+              <button class="quiz-button">Take a Quiz</button>
+            </a>
+        </div>
+      </div>
+    </section>
+    <section class="main-section" id="Function_Expressions">
+      <header>1.5 Tangential and Normal Components of Acceleration</header>
+      <div class="chapter-container">
+        <div class="subchapter">
+          
+          <p><strong>Overview</strong></p>
+          <p>This section introduces the TNB (Frenet) frame, a moving coordinate system that better describes motion along a curve. It consists of the unit tangent (T), normal (N), and binormal (B) vectors, which help analyze direction, turning, and twisting.</p>
+          <img src="images/5.png" alt="img">
+          <p><strong>The TNB Frame</strong></p>
+          <p>The binormal vector of a curve in space is B = T × N, which is a unit vector that is orthogonal to both T and N (See Fig.). Together T, N, and B define a moving right handed vector frame.</p>
+          <p><strong>Tangential and Normal Components of Acceleration</strong></p>
+          <p>If the acceleration vector is written as $$\vec{a} = a_T \mathbf{T} + a_N \mathbf{N}$$, then</p>
+          <p class="math">$$a_T = \frac{d}{dt} |\vec{v}| \quad (1) \quad \text{and} \quad a_N = \kappa |\vec{v}|^2 \quad (2)$$</p>
+          <p>are the tangential and normal scalar components of acceleration. To calculate a<sub>N</sub>, we usually use the formula</p>
+          <p class="math">$$a_N = \sqrt{|\vec{a}|^2 - a_T^2} \quad (3)$$</p>
+          <p>The tangential component of acceleration a<sub>T</sub> measures the rate of change of the length of v (that is, the change in the speed). The normal component of acceleration a<sub>N</sub> measures the rate of change of the direction of v.</p>
+          <div class="example">
+            <p><strong>EXAMPLE</strong> Without finding T and N, write the acceleration of the motion $$\vec{r}(t) = (\cos t + t \sin t)\mathbf{i} + (\sin t - t \cos t)\mathbf{j}, \quad t > 0$$ in the form $$\vec{a} = a_T \mathbf{T} + a_N \mathbf{N}$$</p>
+            <p>$$\vec{v} = \frac{d\vec{r}}{dt} = (-\sin t + \sin t + t \cos t)\mathbf{i} + (\cos t - \cos t + t \sin t)\mathbf{j}$$</p>
+            <p>$$\vec{v} = (t \cos t)\mathbf{i} + (t \sin t)\mathbf{j}$$</p>
+            <p>$$|\vec{v}| = \sqrt{t^2 \cos^2 t + t^2 \sin^2 t} = \sqrt{t^2} = |t| = t$$</p>
+            <p>$$a_T = \frac{d}{dt} |\vec{v}| = \frac{d}{dt} (t) = 1$$</p>
+            <p>Knowing a<sub>T</sub>, we use Equation (3) to find a<sub>N</sub>:</p>
+            <p>$$\vec{a} = (\cos t - t \sin t)\mathbf{i} + (\sin t + t \cos t)\mathbf{j}$$</p>
+            <p>$$|\vec{a}|^2 = t^2 + 1$$</p>
+            <p>$$a_N = \sqrt{|\vec{a}|^2 - a_T^2} = \sqrt{t^2 + 1 - 1} = \sqrt{t^2} = t$$</p>
+            <p>Thus, $$\vec{a} = a_T \mathbf{T} + a_N \mathbf{N} = (1)\mathbf{T} + (t)\mathbf{N} = \mathbf{T} + t\mathbf{N}$$</p>
+          </div>
+          <p><strong>Curvature</strong></p>
+          <p>The curvature κ can be thought of as the rate at which the normal plane turns as the point P moves along its path.</p>
+          <p><strong>Vector Formula for Curvature</strong></p>
+          <p class="math">$$\kappa = \frac{|\vec{v} \times \vec{a}|}{|\vec{v}|^3} \quad (4) \quad \text{or} \quad \kappa = \frac{1}{|\vec{v}|} \left|\frac{d\mathbf{T}}{dt}\right|$$</p>
+          <p><strong>Torsion</strong></p>
+          <p><strong>Formula for Torsion</strong></p>
+          <p class="math">$$\tau = \frac{\begin{vmatrix} \dot{x} & \dot{y} & \dot{z} \\ \ddot{x} & \ddot{y} & \ddot{z} \\ \dddot{x} & \dddot{y} & \dddot{z} \end{vmatrix}}{|\vec{v} \times \vec{a}|^2} \quad (\text{if } \vec{v} \times \vec{a} \neq 0) \quad (5)$$</p>
+          <p>The torsion τ is the rate at which the osculating plane turns about T as P moves along the curve. Torsion measures how the curve twists.</p>
+          <div class="example">
+            <p><strong>EXAMPLE</strong> Find the curvature κ and torsion τ for the helix $$\vec{r}(t) = (a \cos t)\mathbf{i} + (a \sin t)\mathbf{j} + bt\mathbf{k}$$</p>
+            <p>We calculate the curvature with Equation (4):</p>
+            <p>$$\vec{v} = -(a \sin t)\mathbf{i} + (a \cos t)\mathbf{j} + b\mathbf{k}$$</p>
+            <p>$$\vec{a} = -(a \cos t)\mathbf{i} - (a \sin t)\mathbf{j}$$</p>
+            <p>$$\vec{v} \times \vec{a} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ -a \sin t & a \cos t & b \\ -a \cos t & -a \sin t & 0 \end{vmatrix} = (ab \sin t)\mathbf{i} - (ab \cos t)\mathbf{j} + a^2\mathbf{k}$$</p>
+            <p class="math">$$\kappa = \frac{|\vec{v} \times \vec{a}|}{|\vec{v}|^3} = \frac{\sqrt{a^2 b^2 + a^4}}{(a^2 + b^2)^{3/2}} = \frac{a \sqrt{a^2 + b^2}}{(a^2 + b^2)^{3/2}} = \frac{a}{a^2 + b^2}$$</p>
+            <p>To evaluate Equation (5) for the torsion, we find the entries in the determinant by differentiating r with respect to t. We already have v and a, and $$\dot{\vec{a}} = \frac{d\vec{a}}{dt} = (a \sin t)\mathbf{i} - (a \cos t)\mathbf{j}$$.</p>
+            <p>Hence,</p>
+            <p class="math">$$\tau = \frac{\begin{vmatrix} \dot{x} & \dot{y} & \dot{z} \\ \ddot{x} & \ddot{y} & \ddot{z} \\ \dddot{x} & \dddot{y} & \dddot{z} \end{vmatrix}}{|\vec{v} \times \vec{a}|^2} = \frac{\begin{vmatrix} -a \sin t & a \cos t & b \\ -a \cos t & -a \sin t & 0 \\ a \sin t & -a \cos t & 0 \end{vmatrix}}{(a \sqrt{a^2 + b^2})^2}$$</p>
+            <p class="math">$$= \frac{b(a^2 \cos^2 t + a^2 \sin^2 t)}{a^2 (a^2 + b^2)} = \frac{b}{a^2 + b^2}$$</p>
+        </div>
+        <p><strong>Computation Formulas for Curves in Space</strong></p>
+        <p>Unit tangent vector: $$\mathbf{T} = \frac{\vec{v}}{|\vec{v}|}$$</p>
+        <p>Principal unit normal vector: $$\mathbf{N} = \frac{d\mathbf{T}/dt}{|d\mathbf{T}/dt|}$$</p>
+        <p>Binormal vector: B = T × N</p>
+        <p>Curvature: $$\kappa = \left|\frac{d\mathbf{T}}{ds}\right| = \frac{|\vec{v} \times \vec{a}|}{|\vec{v}|^3}$$</p>
+        <p>Torsion: $$\tau = -\left(\frac{d\mathbf{B}}{ds}\right) \cdot \mathbf{N} = \frac{\begin{vmatrix} \dot{x} & \dot{y} & \dot{z} \\ \ddot{x} & \ddot{y} & \ddot{z} \\ \dddot{x} & \dddot{y} & \dddot{z} \end{vmatrix}}{|\vec{v} \times \vec{a}|^2}$$</p>
+        <p>Tangential and normal scalar components of acceleration: $$\vec{a} = a_T \mathbf{T} + a_N \mathbf{N}$$</p>
+        <p>$$a_T = \frac{d}{dt} |\vec{v}|$$</p>
+        <p>$$a_N = \kappa |\vec{v}|^2 = \sqrt{|\vec{a}|^2 - a_T^2}$$</p>
+        <p><strong>EXERCISES</strong></p>
+        <ol>
+            <li>Write a in the form $$\vec{a} = a_T \mathbf{T} + a_N \mathbf{N}$$ without finding T and N (find a<sub>T</sub> and a<sub>N</sub>).
+                <p class="math">$$\vec{r}(t) = (a \cos t)\mathbf{i} + (a \sin t)\mathbf{j} + bt\mathbf{k}$$</p>
+            </li>
+            <li>Find T, N, B, κ, τ.
+                <p class="math">$$\vec{r}(t) = (3 \sin t)\mathbf{i} + (3 \cos t)\mathbf{j} + 4t\mathbf{k}$$</p>
+            </li>
+        </ol>
+        <div class="quiz-container">
+          <a href="quizes/quiz1-5.html">
+              <button class="quiz-button">Take a Quiz</button>
+          </a>   
+        </div>
+      </div>
+    </section>
+    
+  </main>
+</html>
