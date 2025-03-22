@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="quiz-gpt.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- MathJax for rendering LaTeX -->
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <title>quiz: Integrals and Vector Fields</title>
+  </head>
+  <body>
+    <header id="header">
+      <p><a href="../../index.html">CALCULUS II</a></p>
+    </header>
+
+    <main>
+      <section id="quiz">
+        <h2>QUIZ: Surfaces and Area</h2>
+        <form id="quiz-form">
+          <!-- Question 1 -->
+          <p style="font-size: 20px; font-weight: bold;">Find a parametrization of the surface. (There are many correct ways to do these)</p>
+          <div class="question">
+            Q1. \( z = x^2 + y^2, \quad z \leq 4 \)
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="10">
+                  \(x = r \sin \theta, \quad y = r \cos \theta, \quad z = r^2, \quad 0 \leq r \leq 4, \quad 0 \leq \theta < 2\pi\)
+              
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="1">
+                  \(x = r^2 \cos \theta, \quad y = r \cos \theta, \quad z = r^2, \quad 0 \leq r \leq 4, \quad 0 \leq \theta < 2\pi\)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="1">
+                  \(x = r \cos \theta, \quad y = r \sin \theta, \quad z = r^2, \quad 0 \leq r \leq 2, \quad 0 \leq \theta < 2\pi\)
+                  
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox1" class="solution-box">
+            <h3>Solution for Q1</h3>
+            <p> The given surface is a paraboloid described by \( z = x^2 + y^2 \). 
+                Using polar coordinates:
+                <br><br>
+                Set \( x = r \cos \theta \), \( y = r \sin \theta \), then \( z = r^2 \). 
+                Since \( z \leq 4 \), we have \( r^2 \leq 4 \Rightarrow 0 \leq r \leq 2 \).
+                <br><br>
+                The complete parametrization is:
+                \[
+                x = r \cos \theta, \quad y = r \sin \theta, \quad z = r^2, \quad 0 \leq r \leq 2, \quad 0 \leq \theta < 2\pi
+                \]
+            </p>
+          </div>
+          
+          <!-- Question 2 -->
+          <div class="question">
+            Q2. \(  
+                z = 9 - x^2 - y^2, \quad z \geq 0
+            \)
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="10">
+                  \( x = r \cos \theta, \quad y = r \sin \theta, \quad z = 9 - r^2, \quad 0 \leq r \leq 3, \quad 0 \leq \theta < 2\pi\)   
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="1">
+                  \( x = r \sin \theta, \quad y = r^2 \cos \theta, \quad z = 9 - r^2, \quad 0 \leq r \leq 3, \quad 0 \leq \theta < 2\pi\)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="1">
+                  \( x = r \sin \theta, \quad y = r \cos \theta, \quad z = 9 - r^2, \quad 0 \leq r \leq 4, \quad 0 \leq \theta < 2\pi\)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox2" class="solution-box">
+            <h3>Solution for Q2</h3>
+            <p>
+                The given surface is a downward-facing paraboloid described by \( z = 9 - x^2 - y^2 \). 
+              Using polar coordinates:
+              <br><br>
+              Set \( x = r \cos \theta \), \( y = r \sin \theta \), then \( z = 9 - r^2 \). 
+              Since \( z \geq 0 \), we have \( 9 - r^2 \geq 0 \Rightarrow r^2 \leq 9 \Rightarrow 0 \leq r \leq 3 \).
+              <br><br>
+              The complete parametrization is:
+              \[
+              x = r \cos \theta, \quad y = r \sin \theta, \quad z = 9 - r^2, \quad 0 \leq r \leq 3, \quad 0 \leq \theta < 2\pi
+              \]
+            </p>
+          </div>         
+          
+          <!-- Submit Button -->
+          <div class="button-cont">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          // Show solution boxes:
+          document.getElementById('solutionBox1').style.display = 'block';
+          document.getElementById('solutionBox2').style.display = 'block';
+    
+          // Highlight the selected answer for Q1
+          const selectedQ1 = document.querySelector('input[name="q1"]:checked');
+          const solutionBox1 = document.getElementById('solutionBox1');
+          if (selectedQ1) {
+            if (selectedQ1.value == '10') {
+              selectedQ1.parentElement.style.color = 'green';
+              selectedQ1.style.backgroundColor = "green";
+              solutionBox1.style.backgroundColor = '#b4ffb4';
+            } else {
+              selectedQ1.parentElement.style.color = 'red';
+              selectedQ1.style.backgroundColor = "red";
+              solutionBox1.style.backgroundColor = '#ffc5c5';
+            }
+          }
+    
+          // Highlight the selected answer for Q2
+          const selectedQ2 = document.querySelector('input[name="q2"]:checked');
+          const solutionBox2 = document.getElementById('solutionBox2');
+          if (selectedQ2) {
+            if (selectedQ2.value == '10') {
+              selectedQ2.parentElement.style.color = 'green';
+              selectedQ2.style.backgroundColor = "green";
+              solutionBox2.style.backgroundColor = '#b4ffb4';
+            } else {
+              selectedQ2.parentElement.style.color = 'red';
+              selectedQ2.style.backgroundColor = "red";
+              solutionBox2.style.backgroundColor = '#ffc5c5';
+            }
+          }
+
+          let submitButton = document.querySelector('.button-cont button');
+          submitButton.textContent = 'RETURN';
+
+          // Update button functionality to redirect to another page
+          submitButton.removeEventListener('click', arguments.callee);
+          submitButton.addEventListener('click', function() {
+            window.location.href = '../ch4.html'; // Change this to your desired page
+          });
+        });
+    </script>
+  </body>
+</html>

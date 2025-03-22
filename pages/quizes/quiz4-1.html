@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="quiz-gpt.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- MathJax for rendering LaTeX -->
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+    ></script>
+    <title>quiz: Integrals and Vector Fields</title>
+  </head>
+  <body>
+    <header id="header">
+      <p><a href="../../index.html">CALCULUS II</a></p>
+    </header>
+
+    <main>
+      <section id="quiz">
+        <h2>QUIZ: Line integrals of Scalar Functions</h2>
+        <form id="quiz-form">
+          <!-- Question 1 -->
+          <p style="font-size: 20px; font-weight: bold;">Evaluating Line Integrals over Space Curves.</p>
+          <div class="question">
+            Q1. \( \int_C (x + y) ds \) where \( C \) is the straight-line segment \( x = t, y = (1 - t), z = 0 \), from (0,1,0) to (1,0,0).
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="1">
+                  \( \frac{\sqrt{2}}{3} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="10">
+                  \( \sqrt{2} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q1" value="1">
+                  \( \frac{2\sqrt{2}}{3} \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox1" class="solution-box">
+            <h3>Solution for Q1</h3>
+            <p>
+                Step 1: Parameterize the curve \( C \) as \( r(t) = (t, 1 - t, 0) \), where \( 0 \leq t \leq 1 \).
+                <br><br> Step 2: Compute \( ds \): \[ ds = \sqrt{(dx/dt)^2 + (dy/dt)^2 + (dz/dt)^2} dt = \sqrt{1^2 + (-1)^2 + 0^2} dt = \sqrt{2} dt \].
+                <br><br> Step 3: Evaluate the integral:
+                \[ \int_0^1 (t + (1 - t)) \sqrt{2} dt \]
+                \[ \int_0^1 1 \cdot \sqrt{2} dt = \sqrt{2} \]
+            </p>
+          </div>
+          
+          <!-- Question 2 -->
+          <div class="question">
+            Q2. \( \int_C (x - y + z - 2) ds \) where \( C \) is the straight-line segment \( x = t, y = (1 - t), z = 1 \), from (0,1,1) to (1,0,1).
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="10">
+                  -\( \sqrt{2} \)   
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="1">
+                  -\( \frac{2\sqrt{2}}{3} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q2" value="1">
+                  -\( \frac{\sqrt{2}}{3} \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div id="solutionBox2" class="solution-box">
+            <h3>Solution for Q2</h3>
+            <p>
+                Step 1: Parameterize the curve \( C \) as \( r(t) = (t, 1 - t, 1) \), where \( 0 \leq t \leq 1 \).
+                <br><br> Step 2: Compute ds: \[ ds = \sqrt{(dx/dt)^2 + (dy/dt)^2 + (dz/dt)^2} dt = \sqrt{1^2 + (-1)^2 + 0^2} dt = \sqrt{2} dt .\]
+                <br><br> Step 3: Evaluate the integral:
+                \[ \int_0^1 (t - (1 - t) + 1 - 2) \sqrt{2} dt \;=\; \int_0^1 (t - 1 + t + 1 - 2) \sqrt{2} dt \;=\; \int_0^1 (2t - 2) \sqrt{2} dt \]
+                \[ \sqrt{2} \int_0^1 (2t - 2) dt \;=\; \sqrt{2} \left[ t^2 - 2t \right]_0^1 \;=\; \sqrt{2} (1 - 2 - (0 - 0)) \;=\; \sqrt{2} (-1) = -\sqrt{2} \]
+
+        
+            </p>
+          </div>
+          
+          <!-- Question 3 -->
+          <div class="question">
+            Q3. \( \int_C (xy + y + z) ds \) along the curve \( r(t) = 2ti + tj + (2 - 2t)k \), \( 0 \leq t \leq 1 \).
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="q3" value="1">
+                  \( \frac{13}{4} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q3" value="1">
+                  \( \frac{13}{6} \)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="q3" value="10">
+                  \( \frac{13}{2} \)
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Solution Box (hidden by default in CSS) -->
+          <div id="solutionBox3" class="solution-box">
+            <h3>Solution for Q3</h3>
+            <p>The partial derivatives are:</p>
+            <p>
+                Step 1: Parameterize the curve \( r(t) = (2t, t, 2 - 2t) \) and compute \( ds \).
+                <br><br> Step 2: Compute \( ds = \sqrt{(dx/dt)^2 + (dy/dt)^2 + (dz/dt)^2} dt = \sqrt{4 + 1 + 4} dt = 3 dt \).
+                <br><br> Step 3: Evaluate the integral:
+                \[ \int_0^1 (2t \cdot t + t + (2 - 2t)) 3 dt \]
+                \[ \int_0^1 (2t^2 + t + 2 - 2t) 3 dt \]
+                \[ \int_0^1 (2t^2 - t + 2) 3 dt = \frac{13}{2}\]
+              </p>
+            </div>
+          
+          
+          <!-- Submit Button -->
+          <div class="button-cont">
+            <button type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          // Show solution boxes:
+          document.getElementById('solutionBox1').style.display = 'block';
+          document.getElementById('solutionBox2').style.display = 'block';
+          document.getElementById('solutionBox3').style.display = 'block';
+    
+          // Highlight the selected answer for Q1
+          const selectedQ1 = document.querySelector('input[name="q1"]:checked');
+          const solutionBox1 = document.getElementById('solutionBox1');
+          if (selectedQ1) {
+            if (selectedQ1.value == '10') {
+              selectedQ1.parentElement.style.color = 'green';
+              selectedQ1.style.backgroundColor = "green";
+              solutionBox1.style.backgroundColor = '#b4ffb4';
+            } else {
+              selectedQ1.parentElement.style.color = 'red';
+              selectedQ1.style.backgroundColor = "red";
+              solutionBox1.style.backgroundColor = '#ffc5c5';
+            }
+          }
+    
+          // Highlight the selected answer for Q2
+          const selectedQ2 = document.querySelector('input[name="q2"]:checked');
+          const solutionBox2 = document.getElementById('solutionBox2');
+          if (selectedQ2) {
+            if (selectedQ2.value == '10') {
+              selectedQ2.parentElement.style.color = 'green';
+              selectedQ2.style.backgroundColor = "green";
+              solutionBox2.style.backgroundColor = '#b4ffb4';
+            } else {
+              selectedQ2.parentElement.style.color = 'red';
+              selectedQ2.style.backgroundColor = "red";
+              solutionBox2.style.backgroundColor = '#ffc5c5';
+            }
+          }
+    
+          // Highlight the selected answer for Q3
+          const selectedQ3 = document.querySelector('input[name="q3"]:checked');
+          const solutionBox3 = document.getElementById('solutionBox3');
+          if (selectedQ3) {
+            if (selectedQ3.value == '10') {
+              selectedQ3.parentElement.style.color = 'green';
+              selectedQ3.style.backgroundColor = "green";
+              solutionBox3.style.backgroundColor = '#b4ffb4';
+            } else {
+              selectedQ3.parentElement.style.color = 'red';
+              selectedQ3.style.backgroundColor = "red";
+              solutionBox3.style.backgroundColor = '#ffc5c5';
+            }
+          }
+
+          let submitButton = document.querySelector('.button-cont button');
+          submitButton.textContent = 'RETURN';
+
+          // Update button functionality to redirect to another page
+          submitButton.removeEventListener('click', arguments.callee);
+          submitButton.addEventListener('click', function() {
+            window.location.href = '../ch4.html'; // Change this to your desired page
+          });
+        });
+    </script>
+  </body>
+</html>

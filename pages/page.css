@@ -1,0 +1,263 @@
+  html {
+      scroll-behavior: smooth;
+      
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Kanit, Tektur, Lato, VT323, Doto, Verdana, sans-serif;
+    z-index: 40;
+    
+  }
+
+  .chapter-container {
+    background-color: white;
+    line-height: 1.6;
+    padding: 20px;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .subchapter {
+    margin-bottom: 30px;
+  }
+  
+  .subchapter h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .subchapter p {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .subchapter strong {
+    font-weight: 600;
+  }
+  
+  .subchapter .math {
+    margin: 10px 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+  }
+  
+  .subchapter .example {
+    display: block;
+    max-width: 100%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .subchapter img {
+    display: block;
+    margin: auto;
+    height: 350px;
+    width: auto;
+  }
+
+  .icon {
+    margin-right: 12px;
+  }
+
+  .subchapter .def {
+    background-color: #caf7ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .subchapter .props {
+    background-color: #f8f7ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .overview {
+    background-color: #fff4f4;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .main-section header {
+    font-family: Tektur;
+  }
+
+  .main-section {
+    display: block;
+    background-color: white;
+    width: 100%; /* Or a fixed width like 800px */
+    max-width: 900px; /*optional, to prevent too much expansion on big screens*/
+    margin: 0 auto; 
+    padding: 20px;
+  }
+
+  
+  #navbar {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: linear-gradient(135deg, #20b2aa, #6a5acd);;
+    color: white;
+    padding: 50px 20px 20px 20px;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+  }
+
+  #JavaScript_Functions #navbar header:hover {
+    transition: 0.3s;
+    transform: translate(3px, -3px);
+    cursor: pointer;
+  }
+
+  #JavaScript_Functions #navbar header a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  #navbar header {
+    font-family: Tektur, Verdana;
+    
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  #navbar ul li {
+    padding: 10px 0;
+    margin: 0 3px;
+  }
+  
+  #navbar ul li a {
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px;
+    font-size: 16px;
+    overflow: hidden; /* Important for ellipsis */
+    text-overflow: ellipsis; /* Truncates text with ellipsis */
+    white-space: nowrap; /* Prevents text from wrapping */
+    box-sizing: border-box;
+    border: 2px solid white;  
+
+  }
+  
+  #navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);;
+    border-radius: 5px;
+  }
+  
+  #main-doc {
+    margin-left: 380px;
+    padding: 20px 0;
+    background-color: white;
+    max-width: 850px;
+  }
+  
+  section header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #6a5acd; 
+  }
+  
+  pre {
+    background-color: #272822;
+    border-radius: 5px;
+    color: #f8f8f2;
+    padding: 15px;
+    overflow-x: auto;
+  }
+  
+  code {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    display: block;
+    white-space: pre-wrap;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    
+    font-size: 18px;
+    list-style: none;
+  }
+  
+  ul li::before {
+    color: #20b2aa;
+    font-weight: bold;
+  }
+  
+  #navbar ul li a {
+    display: block;
+    padding: 10px;
+    transition: all 0.3s;
+  }
+  
+  #navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 15px;
+    transform: translateY(-3px)
+  }
+  
+  section p {
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    #navbar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  
+    #main-doc {
+      margin-left: 0;
+      padding: 15px;
+    }
+  }
+  
+  .quiz-container {
+      text-align: center;
+      margin: 20px 0;
+  }
+  
+  .quiz-button {
+      background-color: #A855F7;
+      color: white;
+      font-size: 20px;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+  }
+  
+  .quiz-button:hover {
+      background-color: #9336D9;
+  }
